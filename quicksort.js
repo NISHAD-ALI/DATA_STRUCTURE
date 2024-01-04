@@ -20,4 +20,4 @@ console.log(quick(v));
 
 
 let k = v.slice(2)
-console.log(k);
+console.log(k);   
