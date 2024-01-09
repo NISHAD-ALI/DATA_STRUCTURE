@@ -1,10 +1,37 @@
-let a = [1,1,3,4,5,2,3]
-let b = [...new Set(a)]
-let newSet = new Set()
-for(let i=0;i<a.length;i++){
-   newSet.add(a[i])
-}
-console.log(newSet.has(1));
-console.log(b);
-const c = a.splice(0,2)
-console.log(a);
+// function bubble(arr){
+//    let count = 0
+//    let temp
+//    do{
+//       count = 0
+//       for(let i=0;i<arr.length;i++){
+//          if(arr[i]>arr[i+1]){
+//             temp = arr[i]
+//             arr[i] = arr[i+1]
+//             arr[i+1] = temp
+//             count = 0
+//          }
+//       }
+//    }
+//    while(count)
+//    return arr
+// }
+
+
+// function selection(arr){
+//    for(let i=0;i<arr.length-1;i++){
+//         let min = i
+//         for(let j=i+1;j<arr.length;j++){
+//          if(arr[j]<arr[min]){
+//             min = j
+//          }
+//         }
+//         if(min != i){
+//          let temp = arr[i]
+//          arr[i] = arr[min]
+//          arr[min] = temp
+//         }
+
+//    }
+//    return arr
+// }
+
