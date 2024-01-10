@@ -1,1 +1,1 @@
-tab.set(r,r)
+stack.print()
