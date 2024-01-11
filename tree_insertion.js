@@ -71,7 +71,7 @@ class BST {
             console.log(root.value)
         }
     }
-
+    
     bfs() {
         const queue = []
         queue.push(this.root)
