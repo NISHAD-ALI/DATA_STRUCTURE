@@ -1,3 +1,6 @@
-const a = [1,2,3,4,5,6]
-
-console.log(a.has(3));
+class Node{
+    constructor(value){
+        this.value = value 
+        this.left = null
+    }
+}
