@@ -3,37 +3,32 @@ class MaxHeap {
       this.heap = [];
     }
   
-    // Get the parent index of a given index
     getParentIndex(index) {
       return Math.floor((index - 1) / 2);
     }
-  
-    // Get the left child index of a given index
+
     getLeftChildIndex(index) {
       return 2 * index + 1;
     }
   
-    // Get the right child index of a given index
+
     getRightChildIndex(index) {
       return 2 * index + 2;
     }
   
-    // Swap two elements in the heap
+
     swap(i, j) {
       const temp = this.heap[i];
       this.heap[i] = this.heap[j];
       this.heap[j] = temp;
     }
-  
-    // Heapify up (used after insertion)
+
     heapifyUp(index) {
       while (index > 0 && this.heap[index] > this.heap[this.getParentIndex(index)]) {
         this.swap(index, this.getParentIndex(index));
         index = this.getParentIndex(index);
       }
     }
-  
-    // Heapify down (used after removal)
   
 
     heapifyDown(index) {
@@ -55,13 +50,12 @@ class MaxHeap {
         }
       }
   
-    // Insert a new element into the heap
+
     insert(value) {
       this.heap.push(value);
       this.heapifyUp(this.heap.length - 1);
     }
   
-    // Remove and return the maximum element from the heap
     extractMax() {
       if (this.heap.length === 0) {
         return null;
@@ -74,7 +68,12 @@ class MaxHeap {
     }
   }
   
-  // Example usage:
+  givenelement(value){
+    let index = this.heap.indexOf(value)
+    let last = this.heap.length-1
+    this.swap(index,last)
+    this.heap.pop()
+}
   const maxHeap = new MaxHeap();
   maxHeap.insert(10);
   maxHeap.insert(5);

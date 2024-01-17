@@ -135,7 +135,7 @@ newBST.insert(33)
 newBST.insert(14)
 newBST.insert(32)
 
-newBST.preOrder(newBST.root)
+newBST.inOrder(newBST.root)
 console.log("-------");
 console.log(newBST.min(newBST.root))
 console.log(newBST.max(newBST.root));
