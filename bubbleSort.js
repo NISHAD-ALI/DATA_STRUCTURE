@@ -12,7 +12,7 @@ function bubbleSort(arr){
             
         }
     }while(count)
-    return arr
+    return arr 
 }
 
 let ar = [1,3,2,6,3]

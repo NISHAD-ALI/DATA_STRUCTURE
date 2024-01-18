@@ -1,67 +1,20 @@
-class Graph{
-  constructor(){
-    this.adjacencyList = {}
-  }
-  addVertex(vertex){
-    if(!this.adjacencyList[vertex]){
-      this.adjacencyList[vertex] = new Set()
-    }
-  }
-  addEdge(vertex1,vertex2){
-    if(!this.adjacencyList[vertex1]){
-      this.adjacencyList[vertex1]
-    }
-    if(!this.adjacencyList[vertex2]){
-      this.adjacencyList[vertex2]
-    }
-    this.adjacencyList[vertex1].add(vertex2)
-    this.adjacencyList[vertex2].add(vertex1)
-  }
-  hasEdge(vertex1,vertex2){
-    return(this.adjacencyList[vertex1].add(vertex2) && this.adjacencyList[vertex2].add(vertex2))
-  }
-  removeEdge(vertex1,vertex2){
-    this.adjacencyList[vertex1].delete(vertex2)
-    this.adjacencyList[vertex2].delete(vertex1)
-  }
-  removeVertex(vertex){
-    if(!this.adjacencyList[vertex]){
-      return
-    }
-    for(let vertice of this.adjacencyList[vertex]){
-      this.removeEdge(vertex,vertice)
-    }
-    delete this.adjacencyList[vertex]
-  }
- dfs(startVertex){
-  let visited = {}
-  const dfsRecursive = (vertex) =>{
-    if(!vertex)return
-    visited[vertex] = true
-    console.log(vertex);
-    for(let neighbor of this.adjacencyList[vertex]){
-      if(!visited[neighbor]){
-        dfsRecursive(neighbor)
+
+var uniqueOccurrences = function(arr) {
+  let newArr = []
+  let count
+  for(let i = 0;i<arr.length-1;i++){
+      count = 0
+      for(let j =i+1;j<arr.length;i++){
+            if(arr[i] === arr[j]){
+                count++
+                newArr.push(count)
+                arr[i] = -1
+            }
       }
-    }
   }
-  dfsRecursive(startVertex)
- }
- bfs(startVertex){
-  let visited = {}
-  let queue = []
-  queue.push(startVertex)
-  visited[startVertex] = true
-  while(queue.length>0){
-    let currentVertex = queue.shift()
-    console.log(currentVertex);
-    for(let neighbor of this.adjacencyList[currentVertex]){
-        if(!visited[neighbor]){
-          queue.push(neighbor)
-          visited[neighbor]= true
-        }
-    }
-  }
- }
- print()
-}
+  console.log(newArr)
+};
+
+
+let ar1r = [1,2,2,1,1,3]
+uniqueOccurrences(ar1r)   

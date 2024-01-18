@@ -9,7 +9,7 @@ class HashMap{
             total += key.charCodeAt(i)
         }
         return total % this.size
-    }
+    }    
     set(key,value){
        let index = this.hash(key)
        while(this.table[index]){
