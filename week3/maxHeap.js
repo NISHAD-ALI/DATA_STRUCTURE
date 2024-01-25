@@ -26,7 +26,7 @@ class MaxHeap {
     heapifyUp(index) {
       while (index > 0 && this.heap[index] > this.heap[this.getParentIndex(index)]) {
         this.swap(index, this.getParentIndex(index));
-        index = this.getParentIndex(index);
+          index = this.getParentIndex(index);
       }
     }
   
@@ -34,7 +34,7 @@ class MaxHeap {
     heapifyDown(index) {
         const leftChildIndex = this.getLeftChildIndex(index);
         const rightChildIndex = this.getRightChildIndex(index);
-        let largest = index;
+         let largest = index;
     
         if (leftChildIndex < this.heap.length && this.heap[leftChildIndex] > this.heap[largest]) {
           largest = leftChildIndex;
